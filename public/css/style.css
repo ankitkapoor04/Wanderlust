@@ -1,0 +1,110 @@
+ body{
+   font-family: 'Plus Jakarta Sans', sans-serif;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+.container{
+   flex:1;
+}
+
+ .navbar{
+    height : 5em;
+    background-color: white;
+ }
+ .nav-link{
+    color : #222222;
+ }
+ .fa-compass{
+    color : red;
+    font-size: 2em;
+ }
+/*footer*/
+ footer {
+   background-color: #a1a0a0; /* Dark background */
+   color: #fff; /* White text color */
+   padding: 20px 0; /* Space around the footer content */
+   font-family: Arial, sans-serif;
+   text-align: center; /* Center align the content */
+}
+
+.f-info {
+   display: flex;
+   flex-direction: column; /* Stack items vertically */
+   align-items: center; /* Center items horizontally */
+   gap: 15px; /* Space between items */
+}
+
+.f-info-socials {
+   display: flex;
+   gap: 20px; /* Space between social icons */
+}
+
+.f-info-socials i {
+   font-size: 24px; /* Icon size */
+   color: #fff; /* White icon color */
+   transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.f-info-socials i:hover {
+   color: #007bff; /* Change icon color on hover */
+}
+
+.f-info-links {
+   display: flex;
+   gap: 15px; /* Space between links */
+}
+
+.f-info-links a {
+   color: #fff; /* White text color */
+   text-decoration: none; /* Remove underline */
+   font-size: 14px;
+   transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.f-info-links a:hover {
+   color: #007bff; /* Change link color on hover */
+}
+/*index.ejs*/
+.listing-card{
+   border :none !important;
+   margin-bottom: 2rem;
+}
+.card-img-top{
+   border-radius:1rem !important ;
+   width:100% !important ;
+   object-fit: cover !important;
+}  
+.card-body{
+   padding: 0% !important;
+}
+.card-text p{
+   font-weight: 400;
+}
+.listing-links{
+   text-decoration: none !important;
+}
+.card-img-overlay{
+   opacity: 0;
+}
+.card-img-overlay:hover{
+   opacity: 0.2;
+   background-color: white;
+}
+.add-btn{
+   background-color: red !important;
+   border: none !important;
+}
+/**//*edit page*/
+.edit-btn{
+   background-color: red !important;
+   border: none !important;
+}
+/*show page*/
+.show-image{
+   height: 200px;
+   width: 100%;
+ object-fit: cover;
+ border-radius: 20px;
+}
+
