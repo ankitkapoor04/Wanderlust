@@ -15,6 +15,11 @@ const reviewSchema = new Schema({
         type: Date,
         default: Date.now, // Use `Date.now` without parentheses
     },
+    author: {
+      type: Schema.Types.ObjectId,
+      ref : "User"
+
+    },
 });
 
 module.exports = mongoose.model("Review", reviewSchema);

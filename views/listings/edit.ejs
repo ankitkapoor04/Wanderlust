@@ -4,7 +4,7 @@
   <div class="row mt-3">
     <div class="col-8 offset-2">
     <h3>Edit your Listing</h3>
-    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
 
       <div class="mb-3">
         <label for="title" class="form-label">Title</label>
@@ -18,11 +18,12 @@
            <%= listing.description %> </textarea>
            <div class="invalid-feedback">Description Should be short</div>
       </div>
-
       <div class="mb-3">
-        <label for="image" class="form-label">Image</label>
-      <input name="listing[image]" value="<%= listing.image %>" class="form-control" type="text" required />
-      <div class="invalid-feedback">Image URL Should be valid</div>
+        <img src="<%= originalImageUrl %>" />
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label"> upload Image</label>
+      <input name="listing[image]"  class="form-control" type="file"  />
       </div>
 
       <div class="row">
@@ -55,6 +56,23 @@
         required
       />
       <div class="invalid-feedback">Location Should be valid</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+  <select  name="listing[category]" class="form-control" required>
+    <option value="Trending">Select</option>
+    <option value="Trending">Trending</option>
+    <option value="Rooms">Rooms</option>
+    <option value="Iconic Cities">Iconic Cities</option>
+    <option value="Mountains">Mountains</option>
+    <option value="Castles">Castles</option>
+    <option value="Camping">Camping</option>
+    <option value="Domes">Domes</option>
+    <option value="Boats">Boats</option>
+    <option value="Farms">Farms</option>
+    <option value="Arctic">Arctic</option>
+  </select>
       </div>
       <button class="btn btn-dark edit-btn mt-3">Edit</button>
 
